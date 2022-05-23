@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<body>
+
+<h1>JavaScript Homework</h1>
+<h2>Ask name, then area of a circle</h2>
+
+<script>
+
+    // Prompt the user for their name
+    let name = prompt("What is your name?", "Type your name here");
+
+    // Show personalized message
+    p = document.createElement("p");
+    p.innerHTML=("Hello, " + name + "!!!!");
+    document.body.appendChild(p);
+    const piValue = 3.1415926;
+    let myFavNum = prompt("Enter your favorite number");
+    let myArea = piValue * myFavNum * myFavNum;
+    h = document.createElement("h");
+    h.innerHTML=("The area of the circle is " + myArea);
+    document.body.appendChild(h);
+
+</script>
+</body>
+</html>
