@@ -1,16 +1,16 @@
 // get form element
-Let form=document.getElementById("form1");
+let form=document.getElementById("form1");
 // Arrow function for form submit event
 form.addEventListener('submit',(e)=>{
   e.preventDefault();
-  Let amount=document.getElementById("amount").value;
-  Let quailty=document.getElementById("quailty").value;
-  Let tip=0;
-  Let output=documnet.getElementById("text");
+  let amount=document.getElementById("amount").value;
+  let quality=document.getElementById("quality").value;
+  let tip=0;
+  let output=document.getElementById("text");
   // pre-defined service quality
-  Let required_quality=['great' , 'ok' , 'poor'];
+  let required_quality=['great' , 'ok' , 'poor'];
   // check if input quality is valid
-  if (required_quality.indexof(quailty)===-1) {
+  if (required_quality.includes(quality)==false) {
     output.innerHTML="<p style ='color:red'>Service quality is invalid!</p>";
     return;
   }
@@ -28,7 +28,7 @@ form.addEventListener('submit',(e)=>{
       else if (quality=== "ok") {
         tip=5;
       }
-      output.innerHTML="<p style='color:green' > The ticket was $ "+amount+" and the tip is $ "+tip" for a "+quality+" service quality </p>"
+      output.innerHTML="<p style='color:green' > The ticket was $ "+amount+" and the tip is $ "+tip+" for a "+quality+" service quality </p>"
     }
   }
-})
+});
